@@ -42,11 +42,11 @@ Install
 Requires Claude Code. In the Claude Code terminal:
 
 /plugin marketplace add le-19-stvn/creative-stack
-/plugin install creative-stack-core@creative-stack
+/plugin install core@creative-stack
 
 Then, from inside any project folder:
 
-/creative-stack-core:new-project
+/core:new-project
 
 Enable department plugins as the router recommends them — they install disabled and turn on per project, so you never carry weight a project doesn't need.
 
