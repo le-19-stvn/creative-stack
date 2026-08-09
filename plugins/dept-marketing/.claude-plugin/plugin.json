@@ -1,5 +1,5 @@
 {
-  "name": "creative-stack-marketing",
+  "name": "dept-marketing",
   "version": "0.1.0",
   "description": "Marketing department for Creative Stack: forces a decided positioning (POSITIONING.md), writes copy and campaigns bound to it, and checks every word against a marketing critic that hunts AI-slop. Delegates to marketing/SEO agents when present. Enable per project.",
   "author": {
