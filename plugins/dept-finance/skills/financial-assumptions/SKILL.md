@@ -1,0 +1,40 @@
+---
+name: financial-assumptions
+description: Force every financial number to rest on a declared assumption instead of a default or a guess, and write them to ASSUMPTIONS.md. Use before building any pricing, model, forecast, or pitch-deck financials, or when the user asks "what should we charge", "build a model", "what are the projections", "TAM". This is the finance department's anti-slop core — the ASSUMPTIONS.md it produces is what financial-model and finance-critic hold every number to.
+---
+
+# Financial Assumptions
+
+No number without a stated reason behind it. Before any model exists, produce an `ASSUMPTIONS.md` that makes every driver explicit — the opposite of a spreadsheet full of numbers nobody can defend.
+
+Read `TASTE.md` and `CLAUDE.md` first for the project's register and constraints (a bootstrapped brand and a VC-track startup make different assumptions on purpose). (Check for and open these with your Read/Glob tools, not shell commands — OS portability.)
+
+## What ASSUMPTIONS.md must declare
+
+Each line is an input with its **source and its basis** — "because X," not a number in a vacuum. Mark each as *known*, *estimated*, or *guess* so the model's confidence is honest.
+
+- **Market basis** — how TAM/SAM/SOM is derived (bottom-up preferred: users × price, not "1% of a big number").
+- **Pricing logic** — what the price is anchored to (value, cost-plus, competitor, willingness-to-pay) and why.
+- **Cost drivers** — fixed vs variable, unit cost, the main cost lines.
+- **Growth & conversion** — acquisition rate, conversion, churn/retention, each with its basis.
+- **Cash** — runway, burn, key timing (when revenue starts, payment terms).
+- **The load-bearing assumptions** — flag the 2–3 the whole model hinges on. If one breaks, the model breaks; name them.
+
+## Rules
+
+- **Declare, don't default.** No industry-standard number gets used silently — write down that you chose it and why.
+- **Bottom-up over top-down.** Build totals from units and rates, not from a percentage of a headline figure.
+- **Conservative unless justified.** Optimism is a declared choice traceable to evidence, never the default.
+- **Honesty labels.** *Known / estimated / guess* on every line — a guess dressed as a fact is the core finance slop.
+
+## Not investment advice
+
+This declares the project's own operating assumptions. It does not recommend securities, investments, or personal financial decisions. Keep that boundary.
+
+## Output
+
+Write `ASSUMPTIONS.md` at project root. Short and declarative — read at the start of every finance session and by `finance-critic` on every deliverable. Link it from `CLAUDE.md`.
+
+## Before calling it done
+
+Every driver has a basis and an honesty label, totals are built bottom-up, and the load-bearing assumptions are named. If a number can't point to its assumption, it doesn't belong yet.

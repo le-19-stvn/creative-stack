@@ -1,0 +1,60 @@
+{
+  "name": "creative-stack",
+  "owner": {
+    "name": "Loan"
+  },
+  "description": "An adaptive Claude Code stack for creative + product work. The core plugin routes each new project and forces a taste layer so the work carries a human point of view, not an AI default. Department plugins mount only when the project needs them.",
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "creative-stack-core",
+      "source": "./plugins/core",
+      "description": "Always-on. Routes new projects, builds the project charter, and enforces the anti-slop taste layer.",
+      "category": "workflow"
+    },
+    {
+      "name": "creative-stack-design",
+      "source": "./plugins/dept-design",
+      "description": "Design department: brand identity, distinctive frontend, design systems — all bound to TASTE.md and checked by a design critic. Enable per project.",
+      "category": "design",
+      "defaultEnabled": false
+    },
+    {
+      "name": "creative-stack-dev",
+      "source": "./plugins/dept-dev",
+      "description": "Dev department: forces a decided stack (STACK.md), builds features bound to it, and checks the code with a dev critic. Delegates to language-specific reviewers when present. Enable per project.",
+      "category": "development",
+      "defaultEnabled": false
+    },
+    {
+      "name": "creative-stack-marketing",
+      "source": "./plugins/dept-marketing",
+      "description": "Marketing department: forces a decided positioning (POSITIONING.md), writes copy and campaigns bound to it, and checks every word with a marketing critic that hunts AI-slop. Delegates to marketing/SEO agents when present. Enable per project.",
+      "category": "marketing",
+      "defaultEnabled": false
+    },
+    {
+      "name": "creative-stack-content",
+      "source": "./plugins/dept-content",
+      "description": "Content department: forces a decided editorial strategy (CONTENT-STRATEGY.md), drafts only pieces the human selects as worth existing, and checks them with a content critic that rejects filler but not honest utility content. Enable per project.",
+      "category": "content",
+      "defaultEnabled": false
+    },
+    {
+      "name": "creative-stack-finance",
+      "source": "./plugins/dept-finance",
+      "description": "Finance department: forces declared assumptions (ASSUMPTIONS.md), builds pricing, unit economics, projections and pitch-deck figures bound to them, and checks the numbers with a finance critic that hunts errors and hidden assumptions. Builds from declared inputs only; not investment advice. Enable per project.",
+      "category": "finance",
+      "defaultEnabled": false
+    },
+    {
+      "name": "creative-stack-legal",
+      "source": "./plugins/dept-legal",
+      "description": "Legal department: forces a declared legal context (LEGAL-CONTEXT.md), drafts and reviews common documents (NDA, ToS, privacy policy, legal notices) from templates bound to it, and checks them with a legal critic that hunts missing and risky clauses. Informational templates only; not legal advice. Enable per project.",
+      "category": "legal",
+      "defaultEnabled": false
+    }
+  ]
+}

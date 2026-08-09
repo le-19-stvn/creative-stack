@@ -1,0 +1,16 @@
+{
+  "name": "creative-stack-core",
+  "version": "0.1.0",
+  "description": "The always-on core of Creative Stack: project routing, project charter, and the anti-slop taste layer.",
+  "author": {
+    "name": "Loan"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "workflow",
+    "scaffolding",
+    "anti-slop",
+    "creative"
+  ]
+}

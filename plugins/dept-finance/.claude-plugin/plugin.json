@@ -1,0 +1,16 @@
+{
+  "name": "creative-stack-finance",
+  "version": "0.1.0",
+  "description": "Finance department for Creative Stack: forces declared assumptions (ASSUMPTIONS.md), builds pricing, unit economics, projections and pitch-deck figures bound to them, and checks the numbers with a finance critic that hunts errors and hidden assumptions. Builds from your declared inputs; never gives personalized investment advice. Enable per project.",
+  "author": {
+    "name": "Loan"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "finance",
+    "pricing",
+    "financial-model",
+    "assumptions"
+  ]
+}
