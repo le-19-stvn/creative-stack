@@ -1,4 +1,4 @@
-#Creative Stack
+#creative Stack
 
 An adaptive, anti-slop stack for Claude Code. Every new project — app, website, brand, content — starts from a declared point of view instead of an AI default.
 
