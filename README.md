@@ -41,7 +41,7 @@ Install
 
 Requires Claude Code. In the Claude Code terminal:
 
-/plugin marketplace add <your-username>/creative-stack
+/plugin marketplace add le-19-stvn/creative-stack
 /plugin install creative-stack-core@creative-stack
 
 Then, from inside any project folder:
