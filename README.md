@@ -48,7 +48,7 @@ Then, from inside any project folder:
 
 /core:new-project
 
-Enable department plugins as the router recommends them — they install disabled and turn on per project, so you never carry weight a project doesn't need.
+Departments don't ship with core — each one is installed separately, in --scope local, so it mounts in that repository only and you never carry weight a project doesn't need. The router recommends the ones this project needs, then offers to run the commands for you; you approve each department at the permission prompt, and reload once at the end with /reload-plugins.
 
 What each department is for
 
