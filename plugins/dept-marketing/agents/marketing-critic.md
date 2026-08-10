@@ -14,6 +14,7 @@ Process:
    - **Claims vs proof** — every superlative must carry proof in the same breath. A claim with no evidence is a flag.
    - **Voice fidelity** — does it sound like `BRAND.md`/`POSITIONING.md`, held across every asset?
    - **The swap test** — replace the product name with a competitor's. If the copy still reads true, it says nothing specific — that's the headline problem.
+   - **Form vs substance** — when the copy targets a specific channel (a social post, a platform-native asset), check that the channel shaped the *form* only. If the claim, audience, enemy, proof, or voice softened to fit the format, flag it: the position was traded for reach. A post can pass the swap test and still have quietly dropped its proof to make the hook land.
 3. Be specific. Not "this feels generic" but "the hero reads 'Elevate your workflow with our seamless solution' — two banned phrases and zero proof; per POSITIONING the claim is '20 minutes instead of 3 days,' so lead with that number."
 4. Prioritize what most makes the copy sound default or off-position. Give each fix a redirect that traces to `POSITIONING.md`/`TASTE.md`/`BRAND.md`, not to your own taste.
 

@@ -31,7 +31,7 @@
     {
       "name": "dept-marketing",
       "source": "./plugins/dept-marketing",
-      "description": "Marketing department: forces a decided positioning (POSITIONING.md), writes copy and campaigns bound to it, and checks every word with a marketing critic that hunts AI-slop. Delegates to marketing/SEO agents when present. Enable per project.",
+      "description": "Marketing department: forces a decided positioning (POSITIONING.md), writes copy and campaigns bound to it, adapts it into channel-native social posts (LinkedIn, Reddit, X, Instagram) without letting the position drift, and checks every word with a marketing critic that hunts AI-slop. Delegates to marketing/SEO agents when present. Enable per project.",
       "category": "marketing",
       "defaultEnabled": false
     },

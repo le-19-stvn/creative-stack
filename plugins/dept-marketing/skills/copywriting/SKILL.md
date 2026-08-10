@@ -1,6 +1,6 @@
 ---
 name: copywriting
-description: Write marketing copy — landing pages, emails, ads, social, launch posts — bound to the project's positioning and taste, delegating to marketing/SEO agents when available. Use when writing or improving any customer-facing marketing copy, or when the user asks for a headline, landing page, campaign, or launch. Trigger on copy, headline, landing, email, ad, launch, campaign. Reads POSITIONING.md, TASTE.md, and BRAND.md first.
+description: Write marketing copy — landing pages, emails, ads, launch announcements — bound to the project's positioning and taste, delegating to marketing/SEO agents when available. Use when writing or improving any customer-facing marketing copy, or when the user asks for a headline, landing page, campaign, or launch. Trigger on copy, headline, landing, email, ad, launch, campaign. Platform-native social posts belong to the social-post skill, not this one. Reads POSITIONING.md, TASTE.md, and BRAND.md first.
 ---
 
 # Copywriting
@@ -12,6 +12,7 @@ Write copy that could only describe *this* product — not any product in its ca
 1. Read `POSITIONING.md`, `TASTE.md`, and `BRAND.md` if present. If `POSITIONING.md` is missing, run the `positioning` skill first — no copy is written on an undecided position. (Check for and open these with your Read/Glob tools, not shell commands — OS portability.)
 2. Pull from POSITIONING: the core message, the proof, the enemy, and the banned-phrases list. Every piece of copy advances the one position; it does not restate the feature list.
 3. Pick the format's job (landing hero = one claim + proof; email = one action; ad = one hook). One idea per asset.
+4. **Anything platform-native goes to `social-post`** — LinkedIn, Reddit, X, Instagram. That skill owns the channel codes; this one owns static copy. Hand it over rather than approximating the channel here.
 
 ## Write
 

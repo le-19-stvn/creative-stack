@@ -25,6 +25,8 @@ Own the campaign's shape — what ships, on which channels, in what order, towar
 
 For each asset, hand the actual writing to the `copywriting` skill — it binds the words to `POSITIONING.md`, filters the banned phrases, and can delegate drafting. This skill stays at the plan level; it does not produce final copy itself.
 
+Social assets go to `social-post` instead — it holds the per-channel codes for LinkedIn, Reddit, X, and Instagram, and keeps the form adapted without letting the position drift. Name the channel and the asset's one job; it does the rest.
+
 ## Before calling it done
 
 Hand the plan to the `marketing-critic` agent against `POSITIONING.md` + `TASTE.md`. If the campaign has no single spine, rides channels the position doesn't justify, or reads as a generic best-practice checklist, redo it.

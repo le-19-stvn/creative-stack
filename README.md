@@ -30,7 +30,7 @@ Plugin	Skills	Critic	Decided doc
 core	new-project · taste-layer · project-charter	slop-critic	TASTE.md · CLAUDE.md
 design	brand-identity · frontend-design · ui-system	design-critic	BRAND.md
 dev	tech-charter · feature-build · security-review	dev-critic	STACK.md
-marketing	positioning · copywriting · campaign-build	marketing-critic	POSITIONING.md
+marketing	positioning · copywriting · campaign-build · social-post	marketing-critic	POSITIONING.md
 content	content-strategy · content-piece	content-critic	CONTENT-STRATEGY.md
 finance	financial-assumptions · financial-model	finance-critic	ASSUMPTIONS.md
 legal	legal-context · legal-doc	legal-critic	LEGAL-CONTEXT.md
@@ -56,7 +56,7 @@ Design — brand identity, distinctive frontend, and design systems that don't r
 
 Dev — forces a decided stack (STACK.md, including what's deliberately out of scope), keeps the build faithful to it, and ships a defensive security-review that scores your hardening and proposes config fixes. Delegates to language reviewers when present; never hard-depends on them.
 
-Marketing — a positioning that names who it's not for and what it's against, copy that stays on-position, and campaign planning. The critic runs the swap test: if you can drop a competitor's name into your copy and it still fits, it says nothing.
+Marketing — a positioning that names who it's not for and what it's against, copy that stays on-position, campaign planning, and channel-native social writers for LinkedIn, Reddit, X and Instagram that adapt the form to each network without touching the position. The critic runs the swap test: if you can drop a competitor's name into your copy and it still fits, it says nothing.
 
 Content — editorial pillars, formats, and cadence that reference positioning and voice without redefining them. The critic rejects filler published for the algorithm — but never rejects honest utility (a tutorial, an FAQ) for lacking a hot take.
 
