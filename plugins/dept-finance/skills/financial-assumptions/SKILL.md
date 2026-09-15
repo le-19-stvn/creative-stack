@@ -27,13 +27,28 @@ Each line is an input with its **source and its basis** — "because X," not a n
 - **Conservative unless justified.** Optimism is a declared choice traceable to evidence, never the default.
 - **Honesty labels.** *Known / estimated / guess* on every line — a guess dressed as a fact is the core finance slop.
 
+## What We Explicitly Reject
+
+`ASSUMPTIONS.md` must carry a `## What We Explicitly Reject` section: the modelling moves this project refuses. It's what `finance-critic` cites alongside the arithmetic, so every line must be **concrete and checkable in a model**:
+
+- "no top-down TAM — never '1% of a $10B market'"
+- "no growth rate held constant past month 12 without a named driver"
+- "never a round number without a derivation beside it"
+- "no revenue line before the product ships in the timeline"
+
+"Be realistic" is not a rule. Ask one follow-up for the checkable form, then move on. Three to six lines.
+
+Most of these surface while declaring the drivers above — the user says "I don't want to fake a hockey stick" in passing. Write it down in the observable form and confirm it.
+
 ## Not investment advice
 
 This declares the project's own operating assumptions. It does not recommend securities, investments, or personal financial decisions. Keep that boundary.
 
 ## Output
 
-Write `ASSUMPTIONS.md` at project root. Short and declarative — read at the start of every finance session and by `finance-critic` on every deliverable. Link it from `CLAUDE.md`.
+Write `ASSUMPTIONS.md` at project root. Short and declarative — read at the start of every finance session and by `finance-critic` on every deliverable.
+
+Then load it into context: add `@ASSUMPTIONS.md` to the `## Domain contracts` section of `CLAUDE.md` — on its own line, at the start of the line, **not inside a code fence** (imports inside fences are silently ignored). Create the section if it isn't there. Check the current state with your Read/Glob tools, not shell commands — OS portability.
 
 ## Before calling it done
 

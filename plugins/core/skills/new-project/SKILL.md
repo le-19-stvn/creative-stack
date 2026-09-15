@@ -21,15 +21,39 @@ Invoke the `project-charter` skill to produce `CLAUDE.md` at project root: type,
 
 ## Step 4 — Recommend departments (announce only)
 
-Based on the type, tell the user which department plugins to mount — and which to leave off. Don't mount everything; that's how you get slop at scale. Rough mapping (adjust to the actual project):
+Read the **actual brief**, not the type label. The type tells you almost nothing: two "websites" can need opposite departments. Don't mount everything either; that's how you get slop at scale.
 
-- **app** → `dept-dev`, `dept-design`; optionally `dept-legal` (light) if there are contracts/NDAs.
-- **website** → `dept-design`, `dept-marketing`, `dept-content`.
-- **brand** → `dept-design`, `dept-content`; usually NOT dev, finance, or ops.
-- **content** → `dept-content`, `dept-marketing`.
-- Add `dept-finance` only when the project genuinely involves pricing, a pitch deck, or a model (e.g. a client proposal, a fundraise).
+Work from two inputs:
 
-Give one line per recommended department saying why *this* project needs it — grounded in what the user actually described, not the mapping recited back. Then name what you're leaving off and why. The refusal is part of the value; say it out loud.
+1. What the user actually described — the work they named, the artefacts they'll need, the deadline, who's involved.
+2. What each department does. The descriptions are in the marketplace entry for each `dept-*` plugin; read them rather than working from memory of what a department "probably" covers.
+
+Then produce one table:
+
+| Department | Mount | Why — from the brief |
+|---|---|---|
+| `dept-design` | yes | "it has to look like nothing else in the category" — there's a visual identity to decide |
+| `dept-finance` | no | no pricing, model, or deck in what you described |
+
+Rules for that table:
+
+- Every **yes** is justified by something the user said. Quote or paraphrase their words. If you can't point to a phrase in the brief, it's not a yes — it's a question.
+- Every **no** gets a reason too. The refusal is part of the value; say it out loud rather than staying silent on six departments.
+- Ambiguity becomes a question, not an assumption. "You mentioned selling this — is there pricing to decide, or is that settled?" One or two questions maximum.
+- A department can be a **yes, later**. Say when it becomes relevant instead of mounting it now.
+
+### Plausibility check
+
+These are the usual shapes. They are **not** the answer — use them only to catch an aberrant result and say so:
+
+- **app** → usually `dept-dev`, `dept-design`
+- **website** → usually `dept-design`, `dept-marketing`, `dept-content`
+- **brand** → usually `dept-design`, `dept-content`; rarely dev or finance
+- **content** → usually `dept-content`, `dept-marketing`
+- `dept-finance` → only with real pricing, a model, or a deck
+- `dept-legal` → only with real documents to draft or review
+
+If your analysis diverges from the shape — an app with no `dept-dev`, a brand project pulling in finance — that's allowed, but name the divergence and the sentence in the brief that justifies it. If you can't, re-read the brief.
 
 At this point nothing has been executed. Wait for the user to confirm the list before Step 5.
 

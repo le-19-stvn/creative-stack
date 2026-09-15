@@ -38,4 +38,14 @@ Include this verbatim in every deliverable (draft or review):
 
 ## Before calling it done
 
-Hand to the `legal-critic` agent (always shipped with this plugin) against `LEGAL-CONTEXT.md`. Every placeholder is filled or flagged, the disclaimer is present, and nothing binding was passed off as final without a lawyer route.
+Send the document to the `legal-critic` agent (always shipped with this plugin). It sees none of this conversation — **paste the full document into the dispatch message**, and name its type so the critic applies the right required-clause checklist.
+
+Then read its `STATUS`:
+
+- **PASS** → done.
+- **REJECT** → tell the user it came back rejected, apply **one** targeted correction from `FIX_DIRECTIVE`, re-submit once.
+- **REJECT again** → **stop**. Show the last `VIOLATED_RULE`, `EVIDENCE` and `FIX_DIRECTIVE` verbatim. The human decides — and a second rejection on a binding document is a signal to route it to a lawyer.
+
+One automatic retry. Never a third generation, and never a silent correction — the user sees every rejection.
+
+Every placeholder is filled or flagged, and the disclaimer is present in every deliverable, rejected or passed.

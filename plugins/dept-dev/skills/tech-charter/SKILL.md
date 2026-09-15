@@ -19,6 +19,22 @@ Make the user choose each line, and record the *reason* — one clause, not a pa
 - **Deployment / hosting** — where it runs, how it ships.
 - **Testing approach** — what gets tested, at what level, with what runner.
 - **The anti-dependencies** — what you deliberately refuse to add, and why. This section is the point: it's what stops kitchen-sink scope creep later.
+- **What we explicitly reject** — see below. This is what `dev-critic` judges code against.
+
+## What We Explicitly Reject
+
+`STACK.md` must carry a `## What We Explicitly Reject` section: the practices this codebase refuses. Anti-dependencies cover *what not to install*; this covers *what not to write*.
+
+Each line must be **concrete and checkable in a diff**:
+
+- "no `any` in application code — unknown plus a narrowing check"
+- "no business logic in route handlers"
+- "no ORM query inside a loop"
+- "no new global state; pass it down or use the existing store"
+
+"Write clean code" is not a rule — it can't be pointed at. Ask one follow-up for the checkable form, then move on. Aim for 3 to 6.
+
+Draw them from what the user already refused while deciding the stack, and from the conventions they stated. Confirm each before recording it.
 
 ## Rules
 
@@ -29,7 +45,9 @@ Make the user choose each line, and record the *reason* — one clause, not a pa
 
 ## Output
 
-Write `STACK.md` at project root. Keep it short and declarative — it's read at the start of every dev session and by `dev-critic` on every deliverable. Link it from `CLAUDE.md`.
+Write `STACK.md` at project root. Keep it short and declarative — it's read at the start of every dev session and by `dev-critic` on every deliverable.
+
+Then load it into context: add `@STACK.md` to the `## Domain contracts` section of `CLAUDE.md` — on its own line, at the start of the line, **not inside a code fence** (imports inside fences are silently ignored). Create the section if it isn't there. Check the current state with your Read/Glob tools, not shell commands — OS portability.
 
 ## Before calling it done
 

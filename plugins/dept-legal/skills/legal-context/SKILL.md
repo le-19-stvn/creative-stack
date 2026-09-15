@@ -25,13 +25,26 @@ Each line is a fact about the project, marked *confirmed* or *to verify with a l
 - **Scope down.** Only list documents the declared context actually requires. Unneeded legal boilerplate is its own kind of risk.
 - **Route the hard stuff out.** If it's binding or specialized, its place here is a pointer to a lawyer, not a draft.
 
+## What We Explicitly Reject
+
+`LEGAL-CONTEXT.md` must carry a `## What We Explicitly Reject` section: what this project refuses to have in its documents. It's what `legal-critic` cites alongside the required-clause checks, so every line must be **concrete and pointable**:
+
+- "no clause copied from a competitor's ToS"
+- "never cite a statute or article number we haven't verified"
+- "no arbitration clause"
+- "never draft anything from the out-of-scope list, even as a starting point"
+
+"Keep it safe" is not a rule. Ask one follow-up for the pointable form, then move on. Three to six lines.
+
 ## Not legal advice
 
 This records the project's context to structure informational templates. It is not legal advice and does not determine legal obligations — a qualified lawyer does.
 
 ## Output
 
-Write `LEGAL-CONTEXT.md` at project root. Short and declarative — read at the start of every legal session and by `legal-critic` on every document. Link it from `CLAUDE.md`.
+Write `LEGAL-CONTEXT.md` at project root. Short and declarative — read at the start of every legal session and by `legal-critic` on every document.
+
+Then load it into context: add `@LEGAL-CONTEXT.md` to the `## Domain contracts` section of `CLAUDE.md` — on its own line, at the start of the line, **not inside a code fence** (imports inside fences are silently ignored). Create the section if it isn't there. Check the current state with your Read/Glob tools, not shell commands — OS portability.
 
 ## Before calling it done
 

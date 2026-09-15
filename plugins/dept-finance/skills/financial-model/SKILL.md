@@ -34,4 +34,14 @@ Include this verbatim in every deliverable (model, table, or deck figures):
 
 ## Before calling it done
 
-Hand to the `finance-critic` agent (always shipped with this plugin) against `ASSUMPTIONS.md`. If a number doesn't tie or hides an undeclared assumption, fix it before it ships. The disclaimer is present in every deliverable.
+Send the model to the `finance-critic` agent (always shipped with this plugin). It sees none of this conversation — **paste the figures and their derivations into the dispatch message**; a critic that can't see the arithmetic can't recompute it.
+
+Then read its `STATUS`:
+
+- **PASS** → done.
+- **REJECT** → tell the user it came back rejected, apply **one** targeted correction from `FIX_DIRECTIVE`, re-submit once.
+- **REJECT again** → **stop**. Show the last `VIOLATED_RULE`, `EVIDENCE` and `FIX_DIRECTIVE` verbatim. The human decides.
+
+One automatic retry. Never a third generation, and never a silent correction — the user sees every rejection.
+
+The disclaimer is present in every deliverable, rejected or passed.

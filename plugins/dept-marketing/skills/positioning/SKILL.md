@@ -19,7 +19,7 @@ Every line is a commitment, not a hedge. "Everyone / anything / the best solutio
 - **The core message.** One sentence a real person would say — no jargon, no superlative.
 - **Proof.** Why the claim is credible: a mechanism, a number, a demonstrable fact. A claim without proof is slop.
 - **Voice.** One line, or a pointer to `BRAND.md`. How this brand sounds and how it refuses to sound.
-- **Banned for this product.** The specific clichés this project must never use (see the anti-slop list below, plus any category-specific ones).
+- **What we explicitly reject.** The specific moves and phrases this project must never use — see below. This is what `marketing-critic` judges copy against.
 
 ## Rules
 
@@ -28,13 +28,26 @@ Every line is a commitment, not a hedge. "Everyone / anything / the best solutio
 - **Earn every claim.** No superlative without proof attached in the same breath.
 - **Sound like a person.** If a human wouldn't say it out loud, it doesn't go in.
 
-## Anti-slop banned phrases (baseline)
+## What We Explicitly Reject
 
-"Elevate / unlock / supercharge / revolutionize / seamless / game-changer / cutting-edge / in today's fast-paced world / take it to the next level / one-stop solution / empower your..." — and any empty superlative. Extend the list per project.
+`POSITIONING.md` must carry a `## What We Explicitly Reject` section. It starts from this baseline and gets extended per project:
+
+"Elevate / unlock / supercharge / revolutionize / seamless / game-changer / cutting-edge / in today's fast-paced world / take it to the next level / one-stop solution / empower your..." — and any empty superlative.
+
+Then add the moves this specific project refuses. Each one **concrete and observable**, so a reviewer can point at it in a draft:
+
+- "never claim we're 'the leading' anything"
+- "no fake urgency — no countdowns, no 'limited spots'"
+- "never open with a rhetorical question"
+- "no comparison table against named competitors"
+
+"Don't sound salesy" is not a rule — ask one follow-up for the observable form, then move on. Three to six project-specific lines on top of the baseline is plenty.
 
 ## Output
 
-Write `POSITIONING.md` at project root. Short and declarative — read at the start of every marketing session and by `marketing-critic` on every deliverable. Link it from `CLAUDE.md`.
+Write `POSITIONING.md` at project root. Short and declarative — read at the start of every marketing session and by `marketing-critic` on every deliverable.
+
+Then load it into context: add `@POSITIONING.md` to the `## Domain contracts` section of `CLAUDE.md` — on its own line, at the start of the line, **not inside a code fence** (imports inside fences are silently ignored). Create the section if it isn't there. Check the current state with your Read/Glob tools, not shell commands — OS portability.
 
 ## Before calling it done
 

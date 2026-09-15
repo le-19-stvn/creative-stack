@@ -25,4 +25,12 @@ Read `TASTE.md` and `BRAND.md`. The system encodes *their* decisions as tokens; 
 
 ## Before calling it done
 
-`design-critic` against `TASTE.md`: does the system still carry the brand's point of view, or did it regress to a generic component kit?
+Send the system to the `design-critic` agent. It sees none of this conversation — **paste the tokens and component specs into the dispatch message**, don't just point at the files.
+
+Then read its `STATUS`:
+
+- **PASS** → done.
+- **REJECT** → tell the user it came back rejected, apply **one** targeted correction from `FIX_DIRECTIVE`, re-submit once.
+- **REJECT again** → **stop**. Show the last `VIOLATED_RULE`, `EVIDENCE` and `FIX_DIRECTIVE` verbatim. The human decides.
+
+One automatic retry. Never a third generation, and never a silent correction — the user sees every rejection.

@@ -32,4 +32,12 @@ These are optional accelerators, not requirements — the skill works without an
 
 ## Before calling it done
 
-Hand to the `dev-critic` agent (always shipped with this plugin) against `STACK.md` + `TASTE.md`. If it finds an undeclared dependency or code no human clearly decided, redo it.
+Send the change to the `dev-critic` agent (always shipped with this plugin). It sees none of this conversation — **paste the diff or the new code into the dispatch message**, don't just point at the files.
+
+Then read its `STATUS`:
+
+- **PASS** → done.
+- **REJECT** → tell the user it came back rejected, apply **one** targeted correction from `FIX_DIRECTIVE`, re-submit once.
+- **REJECT again** → **stop**. Show the last `VIOLATED_RULE`, `EVIDENCE` and `FIX_DIRECTIVE` verbatim. The human decides.
+
+One automatic retry. Never a third generation, and never a silent correction — the user sees every rejection.

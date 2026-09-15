@@ -14,13 +14,84 @@ Creative Stack does the opposite. It keeps you in the driver's seat.
 
 How it works
 
-Two mechanisms carry the whole thing:
+Three mechanisms carry the whole thing:
 
-1. Adaptive routing. You run /new-project, and the router detects what you're building, then mounts only the departments that project needs. A brand project pulls in design and content — and deliberately leaves off dev, finance, and legal. Nothing mounts without your say-so.
+1. Adaptive routing. You run /new-project and describe what you're building. The router reads the brief — not a category label — and recommends only the departments that project actually needs, naming what it's leaving off and why. A one-page investor site with a locked brand book needs positioning and finance, not a brand identity. Nothing mounts without your say-so.
 
-2. The taste layer. Before anything gets generated, you declare your references, your anti-references, and what you bring that a generic tool wouldn't. It's written to a TASTE.md that every department reads — and a critical reviewer confronts every output against it, sending back anything generic.
+2. The taste layer. Before anything gets generated, you declare your references, your anti-references, what you explicitly reject, and what you bring that a generic tool wouldn't. It's written to a TASTE.md — and CLAUDE.md imports it, so the rules are already in context for every session and every reviewer, instead of waiting for someone to remember to open the file.
+
+3. The critic contract. Each department ships one isolated reviewer that answers PASS or REJECT — and a REJECT has to quote the rule it's enforcing and the exact text that breaks it. A reviewer can't reject on its own taste, and it can't invent a rule you never wrote. One automatic retry, then it stops and hands you the verdict.
 
 The kit doesn't supply taste. It supplies the mechanism that forces you to have one. That part is generic on purpose: your taste, not mine.
+
+The trade is deliberate: the reviewers only enforce what you actually declared. A thin TASTE.md buys you a permissive critic. That's why the rejection list has to be concrete — see below.
+
+What a TASTE.md looks like
+
+The taste layer interviews you and writes this. The part that does the work downstream is the last section: every line is something a reviewer can point at in a deliverable.
+
+```markdown
+# Taste — Ledgerline
+
+## References
+- Stripe docs — dense but never cramped; the type does the hierarchy, not boxes.
+- Teenage Engineering — the confidence to leave a surface empty.
+- My accountant's paper worksheets — numbers aligned so the eye checks them fast.
+
+## Anti-references
+- Every French fintech landing page: illustration of a smiling person holding a card.
+- Notion templates. Rounded, soft, weightless.
+
+## Feeling
+Should evoke: precise, quiet, trustworthy.
+Must NOT evoke: playful, disruptive, friendly-startup.
+
+## What We Explicitly Reject
+- No centered hero with the headline in the middle and the CTA underneath.
+- No purple-to-blue gradient.
+- No illustrated characters, ever.
+- Never set a number in a lighter weight than the label next to it.
+- No rounded corners above 4px.
+
+## Non-negotiables
+- The accent is the ink blue from my letterhead: #1B2A4A. One accent, no second.
+- Body type is a real text face, never a UI sans.
+
+## What I bring
+I did this job for nine years. I know which three numbers a bookkeeper checks
+first, and they go at the top — not the ones that demo well.
+```
+
+"Nothing generic" is not a line the taste layer will accept. It can't be pointed at, so it can't be enforced.
+
+A rejection, in practice
+
+You write copy, the critic reviews it, and you see exactly what broke. Here's a full cycle.
+
+The draft:
+
+> supercharge your month-end close
+
+The critic:
+
+```
+STATUS: REJECT
+VIOLATED_RULE: Elevate / unlock / supercharge / revolutionize / seamless / game-changer
+  / cutting-edge / in today's fast-paced world / take it to the next level — and any
+  empty superlative.
+EVIDENCE: supercharge your month-end close
+FIX_DIRECTIVE: Replace the banned verb with the declared core message.
+```
+
+One targeted correction is applied — the core message from POSITIONING.md, which is "close the month once, not three times" — and it goes back:
+
+```
+STATUS: PASS
+```
+
+That's the whole verdict on a pass. No score, no summary, no "great work overall."
+
+If the second attempt is rejected too, the loop stops there. You get the last VIOLATED_RULE, EVIDENCE and FIX_DIRECTIVE verbatim, and you decide — rewrite it yourself, change the rule, or ship it anyway. The stack never quietly generates a third version to get a green light.
 
 Architecture
 

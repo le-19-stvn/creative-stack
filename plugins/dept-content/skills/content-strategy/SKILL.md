@@ -11,7 +11,7 @@ Read `TASTE.md`, `POSITIONING.md`, and `BRAND.md` first if they exist. This doc 
 
 ## What CONTENT-STRATEGY.md decides (and ONLY this)
 
-Keep it to these four. Positioning lives in `POSITIONING.md`, voice lives in `BRAND.md`; link, don't copy.
+Keep it to these four, plus the rejections section below. Positioning lives in `POSITIONING.md`, voice lives in `BRAND.md`; link, don't copy.
 
 - **Editorial pillars** — the 3–5 themes this brand has authority to own, each traced to a claim in `POSITIONING.md`. Not "topics we could cover" — the themes we choose to be known for.
 - **Formats** — the specific shapes we publish (deep-dive essay, teardown, changelog, tutorial, FAQ…) and, just as important, the ones we deliberately don't.
@@ -24,9 +24,24 @@ Keep it to these four. Positioning lives in `POSITIONING.md`, voice lives in `BR
 - **Pillars earn their place.** Each maps to a positioning claim the brand can actually back. Drop any pillar that's just "a thing people search for."
 - **Cadence is a ceiling, not a quota.** It caps commitment; it never obligates filler to hit a number.
 
+## What We Explicitly Reject
+
+`CONTENT-STRATEGY.md` must carry a `## What We Explicitly Reject` section: the editorial moves this brand refuses. It's what `content-critic` cites, so every line must be **concrete and observable in a draft**:
+
+- "no listicles"
+- "never write about a topic we haven't done ourselves"
+- "no 'X vs Y' comparison posts"
+- "never publish a piece whose only reason to exist is a keyword"
+
+Note that this is about *refusals*, not quality adjectives — "no low-value content" can't be pointed at. Ask one follow-up for the observable form, then move on. Three to six lines.
+
+Stay inside this doc's scope: rejections about *what we publish and how it's shaped*. Banned phrases belong to `POSITIONING.md`, visual refusals to `BRAND.md`. Don't restate them here.
+
 ## Output
 
-Write `CONTENT-STRATEGY.md` at project root. Short and declarative — read at the start of every content session and by `content-critic` on every piece. Link it from `CLAUDE.md`.
+Write `CONTENT-STRATEGY.md` at project root. Short and declarative — read at the start of every content session and by `content-critic` on every piece.
+
+Then load it into context: add `@CONTENT-STRATEGY.md` to the `## Domain contracts` section of `CLAUDE.md` — on its own line, at the start of the line, **not inside a code fence** (imports inside fences are silently ignored). Create the section if it isn't there. Check the current state with your Read/Glob tools, not shell commands — OS portability.
 
 ## Before calling it done
 

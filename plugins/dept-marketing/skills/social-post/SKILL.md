@@ -16,7 +16,7 @@ You adapt hook, length, structure, and rhythm to the channel. The claim, the aud
 ## Before writing
 
 1. Read `POSITIONING.md`, plus `TASTE.md` and `BRAND.md` if present. **If `POSITIONING.md` is missing, stop** — nothing gets published on an undecided position. Point to the `positioning` skill and go no further. (Check for and open these with your Read/Glob tools, not shell commands — OS portability.)
-2. Pull the core message, the proof, the enemy, the named audience, and the banned-phrases list. Those five travel unchanged to every channel.
+2. Pull the core message, the proof, the enemy, the named audience, and its `## What We Explicitly Reject` section (which carries the banned phrases). Those five travel unchanged to every channel.
 3. Settle source or no source (below).
 4. Name the platforms, then read `platforms/<name>.md` for each one you're writing — that file only.
 
@@ -51,4 +51,12 @@ Whatever a delegate returns is raw material. They optimize for reach; you hold t
 
 ## Before calling it done
 
-Hand to the `marketing-critic` agent (always shipped with this plugin), naming the platform and the source piece if there was one. It runs the swap test and checks that the channel shaped the form only. If the claim, the enemy, or the proof got softened to fit the format, the post traded the position for reach — rewrite it.
+Send the post to the `marketing-critic` agent (always shipped with this plugin). It sees none of this conversation — **paste the post into the dispatch message**, and name the platform and the source piece it was adapted from. Without the source, the critic can't tell whether the position drifted.
+
+Then read its `STATUS`:
+
+- **PASS** → done.
+- **REJECT** → tell the user it came back rejected, apply **one** targeted correction from `FIX_DIRECTIVE`, re-submit once.
+- **REJECT again** → **stop**. Show the last `VIOLATED_RULE`, `EVIDENCE` and `FIX_DIRECTIVE` verbatim. The human decides.
+
+One automatic retry. Never a third generation, and never a silent correction — the user sees every rejection.

@@ -27,4 +27,12 @@ The default three-equal-cards row as the only layout idea, centered-everything, 
 
 ## Before calling it done
 
-Hand to the `design-critic` agent against `TASTE.md`. If it can't point to a visible human decision, redo it.
+Send the interface to the `design-critic` agent. It sees none of this conversation — **paste the markup, styles, and design decisions into the dispatch message**, don't just point at the files.
+
+Then read its `STATUS`:
+
+- **PASS** → done.
+- **REJECT** → tell the user it came back rejected, apply **one** targeted correction from `FIX_DIRECTIVE`, re-submit once.
+- **REJECT again** → **stop**. Show the last `VIOLATED_RULE`, `EVIDENCE` and `FIX_DIRECTIVE` verbatim. The human decides.
+
+One automatic retry. Never a third generation, and never a silent correction — the user sees every rejection.

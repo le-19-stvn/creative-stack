@@ -38,4 +38,12 @@ Whatever a delegate returns is raw material, not the finished piece — hold it 
 
 ## Before calling it done
 
-Hand to the `content-critic` agent (always shipped with this plugin). If it can't find the reader or the intent, the piece shouldn't exist — cut it.
+Send the piece to the `content-critic` agent (always shipped with this plugin). It sees none of this conversation — **paste the full draft into the dispatch message**, and name the pillar it was selected against.
+
+Then read its `STATUS`:
+
+- **PASS** → done.
+- **REJECT** → tell the user it came back rejected, apply **one** targeted correction from `FIX_DIRECTIVE`, re-submit once.
+- **REJECT again** → **stop**. Show the last `VIOLATED_RULE`, `EVIDENCE` and `FIX_DIRECTIVE` verbatim. The human decides — including whether the piece should exist at all.
+
+One automatic retry. Never a third generation, and never a silent correction — the user sees every rejection.
