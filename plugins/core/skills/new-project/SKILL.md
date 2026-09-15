@@ -71,8 +71,8 @@ Then, **one department at a time**, in the order you recommended them:
 
 | State | Command |
 |---|---|
-| Not installed | `claude plugin install dept-X@creative-stack --scope local && claude plugin enable dept-X@creative-stack` |
-| Installed, disabled | `claude plugin enable dept-X@creative-stack` |
+| Not installed | `claude plugin install dept-X@creative-stack --scope local && claude plugin enable dept-X@creative-stack --scope local` |
+| Installed, disabled | `claude plugin enable dept-X@creative-stack --scope local` |
 | Already enabled | Skip it. Say so. |
 
 `--scope local` mounts the department in this repository only — that's the whole point of the stack. Use `--scope user` only if the user explicitly asks for it across projects.
@@ -91,7 +91,7 @@ If execution is refused, unavailable, or errors out, print the full commands as 
 
 ```
 claude plugin install dept-design@creative-stack --scope local
-claude plugin enable dept-design@creative-stack
+claude plugin enable dept-design@creative-stack --scope local
 ```
 
 Report honestly what got enabled and what didn't. Never report a department as mounted when its command was refused or failed.
