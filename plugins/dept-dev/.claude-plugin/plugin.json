@@ -1,6 +1,6 @@
 {
   "name": "dept-dev",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Dev department for Creative Stack: forces a decided stack (STACK.md), builds features bound to that decision, checks the code against a dev critic, and runs a scored defensive hardening audit before launch. Delegates to language/security reviewers when present; nothing generic ships by default.",
   "author": {
     "name": "Loan"

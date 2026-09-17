@@ -1,7 +1,7 @@
 {
   "name": "dept-legal",
-  "version": "0.1.0",
-  "description": "Legal department for Creative Stack: forces a declared legal context (LEGAL-CONTEXT.md), drafts and reviews common documents (NDA, ToS, privacy policy, legal notices) from templates bound to it, and checks them with a legal critic that hunts missing and risky clauses. Informational templates only; not legal advice — have a lawyer validate anything binding. Enable per project.",
+  "version": "0.2.0",
+  "description": "Legal department for Creative Stack: forces a declared legal context (LEGAL-CONTEXT.md), drafts and reviews common documents (NDA, ToS, privacy policy, legal notices) from templates bound to it, and checks them with a legal critic that hunts missing clauses and inconsistency with the declared context. Informational templates only; not legal advice — have a lawyer validate anything binding. Enable per project.",
   "author": {
     "name": "Loan"
   },

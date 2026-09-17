@@ -26,7 +26,7 @@ Read the **actual brief**, not the type label. The type tells you almost nothing
 Work from two inputs:
 
 1. What the user actually described — the work they named, the artefacts they'll need, the deadline, who's involved.
-2. What each department does. The descriptions are in the marketplace entry for each `dept-*` plugin; read them rather than working from memory of what a department "probably" covers.
+2. What each department does — the description that ships with each `dept-*` plugin. Work from those descriptions rather than from memory of what a department "probably" covers. Don't go looking for the marketplace file: it lives wherever the stack was installed, not in the user's project. If a department's scope is unclear to you, ask instead of guessing.
 
 Then produce one table:
 

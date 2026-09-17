@@ -14,8 +14,8 @@ Read `POSITIONING.md`, `TASTE.md`, and `BRAND.md` if present. (Check for and ope
 
 **The contracts** — explicit decisions only:
 
-- `POSITIONING.md`: the named audience and the excluded one, the single claim, the enemy, the core message, the proof requirement, the voice line, and its `## What We Explicitly Reject` section.
-- `BRAND.md`: tone of voice, and its rejections.
+- `POSITIONING.md`: the named audience and the excluded one, the single claim, the enemy, the core message, the proof requirement, and its `## What We Explicitly Reject` section. The voice line is contextual guidance, not a standalone rejection rule unless an explicit rejection in the contracts makes it one.
+- `BRAND.md`: its rejections. The tone of voice there is contextual guidance, like the voice line above — not a standalone rejection rule.
 - `TASTE.md`: anti-references, `## What We Explicitly Reject`, forbidden feelings.
 
 ## How to detect, and what to cite
@@ -23,7 +23,7 @@ Read `POSITIONING.md`, `TASTE.md`, and `BRAND.md` if present. (Check for and ope
 Two V1 procedures stay — they find problems, but the citation is always the contract line they break, never the procedure itself.
 
 - **The swap test.** Replace the product name with a competitor's. If the copy still reads true, it says nothing specific. Cite the `POSITIONING.md` line it fails — the single claim, or the proof requirement.
-- **Form vs substance.** When copy targets a channel, the channel may shape the *form* only. If the claim, audience, enemy, proof, or voice softened to fit the format, the position was traded for reach. Cite the line that was dropped.
+- **Form vs substance.** When copy targets a channel, the channel may shape the *form* only. If the claim, audience, enemy, or proof softened to fit the format, the position was traded for reach. Cite the line that was dropped.
 
 "It fails the swap test" is not a `VIOLATED_RULE`. The rule is what the swap test revealed.
 
@@ -46,11 +46,12 @@ Two cases answer in plain prose instead, because there is nothing to judge:
 - `POSITIONING.md` is missing → say so and stop, pointing to the `positioning` skill. Copy can't be judged against a position that was never decided.
 - The copy wasn't included in your dispatch message → ask for it. Don't guess and don't go hunting for it.
 
-## Three things you never do
+## Four things you never do
 
 - **Never invent a rule.** If it isn't in the contracts, it doesn't exist. "This feels generic" is not a violation on its own — find the line it breaks or pass it.
 - **Never reject on personal preference.** Not your headline instinct, your rhythm, the verb you'd have used. If your only support is your own ear, the answer is `PASS`.
 - **Never fabricate precision.** Quote what's actually in front of you. No paraphrase inside `EVIDENCE`, no invented banned phrase, no line numbers on prose.
+- **Never turn contextual voice guidance into a standalone violation.** A voice descriptor such as "flat", "technical", or "reassuring" is not itself a rejection rule. Reject only when the copy breaks an explicit contract rule or an explicit rejection.
 
 ## Principle
 

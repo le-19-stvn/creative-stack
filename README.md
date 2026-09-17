@@ -106,7 +106,7 @@ content	content-strategy · content-piece	content-critic	CONTENT-STRATEGY.md
 finance	financial-assumptions · financial-model	finance-critic	ASSUMPTIONS.md
 legal	legal-context · legal-doc	legal-critic	LEGAL-CONTEXT.md
 
-Every department follows the same pattern: short, opinionated producing skills, one decided document it holds work to, and one isolated critic whose only job is to catch what's generic — or, for finance and legal, what's wrong or risky.
+Every department follows the same pattern: short, opinionated producing skills, one decided document it holds work to, and one isolated critic that answers PASS or REJECT against the rules that document declares — and, for finance and legal, against a short enumerated list of objective checks such as arithmetic that doesn't reconcile or a required clause that's missing.
 
 Install
 
@@ -119,7 +119,7 @@ Then, from inside any project folder:
 
 /core:new-project
 
-Departments don't ship with core — each one is installed separately, in --scope local, so it mounts in that repository only and you never carry weight a project doesn't need. The router recommends the ones this project needs, then offers to run the commands for you; you approve each department at the permission prompt, and reload once at the end with /reload-plugins.
+Departments don't ship with core — each one is installed and enabled separately, both with --scope local, so it mounts in that repository only and you never carry weight a project doesn't need. The router recommends the ones this project needs, then offers to run the commands for you; you approve each department at the permission prompt, and reload once at the end with /reload-plugins.
 
 What each department is for
 

@@ -1,6 +1,6 @@
 {
   "name": "dept-content",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Content department for Creative Stack: forces a decided editorial strategy (CONTENT-STRATEGY.md), drafts pieces the human selects as worth existing, and checks them with a content critic that rejects filler but not honest utility content. References POSITIONING.md and BRAND.md without redefining them. Enable per project.",
   "author": {
     "name": "Loan"

@@ -28,15 +28,15 @@ Case targets: **A, C, E** → `core`. **B, D** → `dept-marketing` (representat
 
 By default the runner adds a no-plugin baseline arm and reports the delta, which is the number that matters: these behaviours should not appear without the plugin.
 
-## Status — not executed, structure unverified
+## Status — manually validated, harness not yet run
 
-- `claude plugin eval` is in **early access** on this account (`plugin eval is currently in early access`, exit 1). **None of these cases has been run, and none is validated.**
-- **The official case structure remains to be verified.** `prompt.md` + `graders/*.md` is the shape named in `claude plugin eval --help`; it has not been checked against a generated template. When the harness is available, generate a reference case with `claude plugin eval init --bare` and align these files to it.
-- The invocations under *Running them* are unverified for the same reason.
-- `runs`, `tags`, and model settings stay at their defaults.
+- **A, B, C, D and E have been validated by hand**, in real Creative Stack workflows, against the behaviour each case describes. That is the basis on which V2 is considered working.
+- **The official harness has never run them.** `claude plugin eval` is in early access on this account (`plugin eval is currently in early access`, exit 1), so no scored run, no baseline arm, and no score delta exists for any case.
+- **The case structure is therefore still unconfirmed.** `prompt.md` + `graders/*.md` is the shape named in `claude plugin eval --help`, but it has never been checked against a generated template. When access lands, generate a reference case with `claude plugin eval init --bare`, align these files to it, then run the suite.
+- The invocations under *Running them* are unverified for the same reason. `runs`, `tags`, and model settings stay at their defaults.
 
-Nothing in this directory is a guarantee until the suite has actually run.
+A manual validation confirms the behaviour happened once, under a human's eye. It is not a regression guard: only a scored, repeated run is, which is what this suite is here to make possible.
 
 ## Relation to the manual Test E
 
-The inference behind the Context Layer — that `@import` expansion reaches a custom sub-agent's initial context — was checked by hand before V2 was built, with a temporary fixture (since deleted). That manual check is **not** a run of `E-context-propagation`; this case has not been executed.
+The inference behind the Context Layer — that `@import` expansion reaches a custom sub-agent's initial context — was checked by hand before V2 was built, with a temporary fixture (since deleted). `E-context-propagation` was likewise validated by hand, not executed by the harness.
