@@ -4,6 +4,8 @@ An adaptive, anti-slop stack for Claude Code. Every new project — app, website
 
 Nothing by default. Everything by decision.
 
+This branch documents Creative Stack V2 — core 0.2.2, tag v0.2.2. It is not on the repository's default branch yet: see Install before adding the marketplace.
+
 The problem
 
 AI produces the average by default. Competent, coherent, and anonymous. What marks work as "AI-made" isn't that AI helped — it's that no human decision is visible in it. No angle, no taste, no choice a machine wouldn't have made on its own.
@@ -110,10 +112,20 @@ Every department follows the same pattern: short, opinionated producing skills, 
 
 Install
 
-Requires Claude Code. In the Claude Code terminal:
+Requires Claude Code.
 
-/plugin marketplace add le-19-stvn/creative-stack
+This version — Creative Stack V2, core 0.2.2 — lives on the v2 branch and the v0.2.2 tag, not on the default branch. Adding the marketplace by its GitHub name (/plugin marketplace add le-19-stvn/creative-stack) installs the default branch, which still holds the earlier 0.1.0 release — not this one.
+
+To install this version, clone the tag:
+
+git clone --branch v0.2.2 https://github.com/le-19-stvn/creative-stack.git
+
+Then, in the Claude Code terminal, add that folder as a local marketplace and install core:
+
+/plugin marketplace add <path-to-your-clone>/creative-stack
 /plugin install core@creative-stack
+
+Keep the folder: a marketplace added from a local folder loads its plugins from it. If you had already added creative-stack from GitHub, remove it first with /plugin marketplace remove creative-stack — both use the same name. Once this version reaches the default branch, the one-line GitHub install will install it directly.
 
 Then, from inside any project folder:
 
