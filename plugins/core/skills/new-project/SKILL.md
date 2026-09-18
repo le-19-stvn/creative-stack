@@ -41,6 +41,7 @@ Rules for that table:
 - Every **no** gets a reason too. The refusal is part of the value; say it out loud rather than staying silent on six departments.
 - Ambiguity becomes a question, not an assumption. "You mentioned selling this — is there pricing to decide, or is that settled?" One or two questions maximum.
 - A department can be a **yes, later**. Say when it becomes relevant instead of mounting it now.
+- **Required capabilities are derived from the project brief. Tool availability must never determine which departments or capabilities the project needs.** A connected design tool is not a reason to recommend design; a missing one is not a reason to drop it. The project needs what it needs, and execution is settled later — see the `capability-brief` skill.
 
 ### Plausibility check
 

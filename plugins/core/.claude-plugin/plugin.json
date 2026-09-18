@@ -1,6 +1,6 @@
 {
   "name": "core",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "The always-on core of Creative Stack: project routing, project charter, and the anti-slop taste layer.",
   "author": {
     "name": "Loan"

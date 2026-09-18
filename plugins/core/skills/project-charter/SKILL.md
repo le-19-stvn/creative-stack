@@ -30,6 +30,9 @@ Read TASTE.md before producing anything visual or written.
 @BRAND.md
 @POSITIONING.md
 
+## Work made outside this session
+Before project decisions go into an external tool, or a deliverable is handed off for someone else to make, run the `capability-brief` skill first. Tool-specific skills execute from that brief; they don't replace it.
+
 ## Stack / tools
 - {{what they chose}}
 
